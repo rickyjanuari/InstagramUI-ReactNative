@@ -3,10 +3,14 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  ScrollView,
+  
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Ionicons';
-
+import { Container , Content, Thumbnail } from 'native-base';
+import StoriesList from '../component/StoriesList';
 type Props = {};
 export default class HomeTab extends Component<Props> {
     static navigationOptions = {
@@ -16,13 +20,21 @@ export default class HomeTab extends Component<Props> {
     }
     render() {
         return (
-          <View style={styles.container}>
-            <Text>HomeTab</Text>
-          </View>
+          <Container style={styles.container}>
+            <Content>
+				<StoriesList/>
+				<View>
+					<Text>Test</Text>
+				</View>
+            </Content>
+          </Container>
         );
       }
 }
 
 const styles = StyleSheet.create({
-  
+	container: {
+		backgroundColor: 'white'
+	},
+	
 });

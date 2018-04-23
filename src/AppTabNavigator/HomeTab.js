@@ -6,7 +6,8 @@ import {
   View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/Ionicons';
-
+import { Container, Content } from 'native-base';
+import StoriesList from '../components/StoriesList';
 type Props = {};
 export default class HomeTab extends Component<Props> {
     static navigationOptions = {
@@ -16,13 +17,18 @@ export default class HomeTab extends Component<Props> {
     }
     render() {
         return (
-          <View style={styles.container}>
-            <Text>HomeTab</Text>
-          </View>
+          <Container style={styles.container}>
+            <Content>            
+              <StoriesList/>
+              <Text>HomeTab</Text>
+            </Content>
+          </Container>
         );
       }
 }
 
 const styles = StyleSheet.create({
-  
+  container: {
+    flex: 1,
+  }
 });

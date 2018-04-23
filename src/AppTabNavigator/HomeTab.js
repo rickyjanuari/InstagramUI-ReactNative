@@ -20,7 +20,7 @@ export default class HomeTab extends Component<Props> {
           <Container style={styles.container}>
             <Content>            
               <StoriesList/>
-              <Text>HomeTab</Text>
+              
             </Content>
           </Container>
         );
@@ -30,5 +30,6 @@ export default class HomeTab extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white'
   }
 });
